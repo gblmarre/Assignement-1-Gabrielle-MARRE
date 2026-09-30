@@ -19,15 +19,14 @@ def is_valid(s):
         return True
 
 def numbers(s):
-    for i in range (len(s)):
+    for i in range(len(s)):
         if s[i].isdigit():
-            if s[i]=="0":  #looking if the first number is 0
+            if s[i] == "0":   #looking if the first number is 0
                 return True
-
-            if s[i:].isdigit() is False:   #looking if all the characters after teh first number are numbers
+            if not s[i:].isdigit():   #looking if all the characters after teh first number are numbers
                 return True
             return False
-        return False
+    return False
 
 main()
 
